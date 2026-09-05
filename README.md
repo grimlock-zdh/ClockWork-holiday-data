@@ -28,7 +28,7 @@ france / germany），统一 schema：
 
 | 脚本 | 输出 |
 | --- | --- |
-| `fetch_holiday.py` | `holiday-data-china.json` |
+| `fetch_holiday_china.py` | `holiday-data-china.json` |
 | `fetch_holiday_japan.py` | `holiday-data-japan.json` |
 | `fetch_holiday_usa.py` | `holiday-data-usa.json` |
 | `fetch_holiday_uk.py` | `holiday-data-uk.json` |
@@ -43,7 +43,7 @@ france / germany），统一 schema：
 ## 更新数据
 
 ```bash
-python3 fetch_holiday.py            # 中国
+python3 fetch_holiday_china.py      # 中国
 python3 fetch_holiday_japan.py      # 日本
 python3 fetch_holiday_usa.py        # 美国
 python3 fetch_holiday_uk.py         # 英国

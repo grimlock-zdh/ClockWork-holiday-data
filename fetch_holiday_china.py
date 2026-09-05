@@ -9,7 +9,7 @@
    - 调休补班日
 3. 输出 holiday-data-china.json（与 App 端格式一致）
 
-使用：python3 fetch_holiday.py
+使用：python3 fetch_holiday_china.py
 输出：holiday-data-china.json（直接写入当前目录）
 """
 

@@ -23,7 +23,7 @@ jobs:
           python-version: '3.11'
       
       - name: 爬取中国（国务院）
-        run: python3 fetch_holiday.py
+        run: python3 fetch_holiday_china.py
 
       - name: 爬取日本（内閣府）
         run: python3 fetch_holiday_japan.py
