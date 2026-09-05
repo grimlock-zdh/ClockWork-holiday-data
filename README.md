@@ -13,6 +13,10 @@ france / germany / india），统一 schema：
 - `ranges`：中国放假区间（名称/起止；其它国家为空）
 - `metadata.officialYears`：官方公布/官方口径核对的年份
 
+规则 / 预测文档命名统一用**连字符**：`holiday-rules-<country>.md`
+（不用下划线/大写；目前中国 = `holiday-rules-china.md`，ClockWork 根目录
+同步一份同内容文档）。
+
 ## 新增国家流程
 
 给 App 加一个新国家节假日时，**先读 ClockWork 仓库根目录的
