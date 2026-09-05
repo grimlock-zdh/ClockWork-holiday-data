@@ -96,13 +96,19 @@ def write_json(
     source: str,
     source_urls: List[str],
     note: str,
+    holiday_names: Optional[Dict[str, Dict[str, str]]] = None,
 ) -> None:
-    """按统一 schema 写 holiday-data-<country>.json。"""
+    """按统一 schema 写 holiday-data-<country>.json。
+
+    holiday_names：可选，{ "YYYY-MM-DD": {"zh": 中文名, "en": 英文名} }。
+    未提供时不写该字段（兼容旧文件/旧 App）。
+    """
     years = sorted(TARGET_YEARS)
     data = {
         "holidays": sorted(set(holidays)),
         "extra_workdays": [],
         "ranges": [],
+        **({"holiday_names": holiday_names} if holiday_names else {}),
         "metadata": {
             "country": country,
             "countryName": country_name,

@@ -80,11 +80,321 @@
  ],
  "extra_workdays": [],
  "ranges": [],
+ "holiday_names": {
+  "2024-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2024-01-15": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2024-02-19": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2024-05-27": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2024-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2024-07-04": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2024-09-02": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2024-10-14": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2024-11-11": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2024-11-28": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2024-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2025-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2025-01-20": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2025-02-17": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2025-05-26": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2025-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2025-07-04": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2025-09-01": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2025-10-13": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2025-11-11": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2025-11-27": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2025-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2026-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2026-01-19": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2026-02-16": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2026-05-25": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2026-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2026-07-03": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2026-09-07": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2026-10-12": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2026-11-11": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2026-11-26": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2026-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2027-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2027-01-18": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2027-02-15": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2027-05-31": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2027-06-18": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2027-07-05": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2027-09-06": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2027-10-11": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2027-11-11": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2027-11-25": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2027-12-24": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2027-12-31": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2028-01-17": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2028-02-21": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2028-05-29": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2028-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2028-07-04": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2028-09-04": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2028-10-09": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2028-11-10": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2028-11-23": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2028-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2029-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2029-01-15": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2029-02-19": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2029-05-28": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2029-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2029-07-04": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2029-09-03": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2029-10-08": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2029-11-12": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2029-11-22": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2029-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2030-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2030-01-21": {
+   "zh": "马丁·路德·金纪念日",
+   "en": "Martin Luther King Jr. Day"
+  },
+  "2030-02-18": {
+   "zh": "华盛顿诞辰",
+   "en": "Washington's Birthday"
+  },
+  "2030-05-27": {
+   "zh": "阵亡将士纪念日",
+   "en": "Memorial Day"
+  },
+  "2030-06-19": {
+   "zh": "六月节",
+   "en": "Juneteenth National Independence Day"
+  },
+  "2030-07-04": {
+   "zh": "独立日",
+   "en": "Independence Day"
+  },
+  "2030-09-02": {
+   "zh": "劳动节",
+   "en": "Labor Day"
+  },
+  "2030-10-14": {
+   "zh": "哥伦布日",
+   "en": "Columbus Day"
+  },
+  "2030-11-11": {
+   "zh": "退伍军人节",
+   "en": "Veterans Day"
+  },
+  "2030-11-28": {
+   "zh": "感恩节",
+   "en": "Thanksgiving Day"
+  },
+  "2030-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  }
+ },
  "metadata": {
   "country": "usa",
   "countryName": "美国",
   "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T09:55:57Z",
+  "generatedAt": "2026-09-05T11:55:12Z",
   "years": [
    2024,
    2030

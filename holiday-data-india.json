@@ -69,11 +69,277 @@
  ],
  "extra_workdays": [],
  "ranges": [],
+ "holiday_names": {
+  "2024-01-26": {
+   "en": "Republic Day",
+   "zh": "共和国日"
+  },
+  "2024-03-25": {
+   "en": "Holi",
+   "zh": "洒红节"
+  },
+  "2024-03-29": {
+   "en": "Good Friday",
+   "zh": "耶稣受难日"
+  },
+  "2024-04-11": {
+   "en": "Id-ul-Fitr",
+   "zh": "开斋节"
+  },
+  "2024-04-17": {
+   "en": "Ram Navami",
+   "zh": "罗摩诞辰"
+  },
+  "2024-04-21": {
+   "en": "Mahavir Jayanti",
+   "zh": "大雄节"
+  },
+  "2024-05-23": {
+   "en": "Buddha Purnima",
+   "zh": "佛诞节"
+  },
+  "2024-06-17": {
+   "en": "Id-ul-Zuha (Bakrid)",
+   "zh": "宰牲节"
+  },
+  "2024-07-17": {
+   "en": "Muharram",
+   "zh": "穆哈兰姆节"
+  },
+  "2024-08-15": {
+   "en": "Independence Day",
+   "zh": "独立日"
+  },
+  "2024-08-26": {
+   "en": "Janmashtami (Vaishnava)",
+   "zh": "黑天诞辰节"
+  },
+  "2024-09-16": {
+   "en": "Milad-un-Nabi / Id-e-Milad",
+   "zh": "圣纪节"
+  },
+  "2024-10-02": {
+   "en": "Mahatma Gandhi's Birthday",
+   "zh": "甘地诞辰"
+  },
+  "2024-10-12": {
+   "en": "Dussehra",
+   "zh": "十胜节"
+  },
+  "2024-10-31": {
+   "en": "Diwali (Deepavali)",
+   "zh": "排灯节"
+  },
+  "2024-11-15": {
+   "en": "Guru Nanak's Birthday",
+   "zh": "那纳克祖师诞辰"
+  },
+  "2024-12-25": {
+   "en": "Christmas Day",
+   "zh": "圣诞节"
+  },
+  "2025-01-26": {
+   "en": "Republic Day",
+   "zh": "共和国日"
+  },
+  "2025-02-26": {
+   "en": "Maha Shivaratri",
+   "zh": "大湿婆夜节"
+  },
+  "2025-03-14": {
+   "en": "Holi",
+   "zh": "洒红节"
+  },
+  "2025-03-31": {
+   "en": "Id-ul-Fitr",
+   "zh": "开斋节"
+  },
+  "2025-04-10": {
+   "en": "Mahavir Jayanti",
+   "zh": "大雄节"
+  },
+  "2025-04-18": {
+   "en": "Good Friday",
+   "zh": "耶稣受难日"
+  },
+  "2025-05-12": {
+   "en": "Buddha Purnima / Ram Navami",
+   "zh": "佛诞节 / 罗摩诞辰"
+  },
+  "2025-06-07": {
+   "en": "Id-ul-Zuha (Bakrid)",
+   "zh": "宰牲节"
+  },
+  "2025-07-06": {
+   "en": "Muharram",
+   "zh": "穆哈兰姆节"
+  },
+  "2025-08-15": {
+   "en": "Independence Day",
+   "zh": "独立日"
+  },
+  "2025-08-16": {
+   "en": "Janmashtami",
+   "zh": "黑天诞辰节"
+  },
+  "2025-09-05": {
+   "en": "Milad-un-Nabi / Id-e-Milad",
+   "zh": "圣纪节"
+  },
+  "2025-10-02": {
+   "en": "Mahatma Gandhi's Birthday + Dussehra",
+   "zh": "甘地诞辰 / 十胜节"
+  },
+  "2025-10-20": {
+   "en": "Diwali (Deepavali)",
+   "zh": "排灯节"
+  },
+  "2025-11-05": {
+   "en": "Guru Nanak's Birthday",
+   "zh": "那纳克祖师诞辰"
+  },
+  "2025-12-25": {
+   "en": "Christmas Day",
+   "zh": "圣诞节"
+  },
+  "2026-01-26": {
+   "en": "Republic Day",
+   "zh": "共和国日"
+  },
+  "2026-03-04": {
+   "en": "Holi",
+   "zh": "洒红节"
+  },
+  "2026-03-21": {
+   "en": "Id-ul-Fitr",
+   "zh": "开斋节"
+  },
+  "2026-03-26": {
+   "en": "Ram Navami",
+   "zh": "罗摩诞辰"
+  },
+  "2026-03-31": {
+   "en": "Mahavir Jayanti",
+   "zh": "大雄节"
+  },
+  "2026-04-03": {
+   "en": "Good Friday",
+   "zh": "耶稣受难日"
+  },
+  "2026-05-01": {
+   "en": "Buddha Purnima",
+   "zh": "佛诞节"
+  },
+  "2026-05-28": {
+   "en": "Id-ul-Zuha (Bakrid) — PIB revised",
+   "zh": "宰牲节"
+  },
+  "2026-06-26": {
+   "en": "Muharram",
+   "zh": "穆哈兰姆节"
+  },
+  "2026-08-15": {
+   "en": "Independence Day",
+   "zh": "独立日"
+  },
+  "2026-08-26": {
+   "en": "Milad-un-Nabi / Id-e-Milad",
+   "zh": "圣纪节"
+  },
+  "2026-09-04": {
+   "en": "Janmashtami (Vaishnava)",
+   "zh": "黑天诞辰节"
+  },
+  "2026-10-02": {
+   "en": "Mahatma Gandhi's Birthday",
+   "zh": "甘地诞辰"
+  },
+  "2026-10-20": {
+   "en": "Dussehra",
+   "zh": "十胜节"
+  },
+  "2026-11-08": {
+   "en": "Diwali (Deepavali)",
+   "zh": "排灯节"
+  },
+  "2026-11-24": {
+   "en": "Guru Nanak's Birthday",
+   "zh": "那纳克祖师诞辰"
+  },
+  "2026-12-25": {
+   "en": "Christmas Day",
+   "zh": "圣诞节"
+  },
+  "2027-01-26": {
+   "en": "Republic Day",
+   "zh": "共和国日"
+  },
+  "2027-03-10": {
+   "en": "Id-ul-Fitr",
+   "zh": "开斋节"
+  },
+  "2027-03-23": {
+   "en": "Holi",
+   "zh": "洒红节"
+  },
+  "2027-03-26": {
+   "en": "Good Friday",
+   "zh": "耶稣受难日"
+  },
+  "2027-04-15": {
+   "en": "Ram Navami",
+   "zh": "罗摩诞辰"
+  },
+  "2027-04-19": {
+   "en": "Mahavir Jayanti",
+   "zh": "大雄节"
+  },
+  "2027-05-17": {
+   "en": "Id-ul-Zuha (Bakrid)",
+   "zh": "宰牲节"
+  },
+  "2027-05-20": {
+   "en": "Buddha Purnima",
+   "zh": "佛诞节"
+  },
+  "2027-06-16": {
+   "en": "Muharram",
+   "zh": "穆哈兰姆节"
+  },
+  "2027-08-15": {
+   "en": "Independence Day + Milad-un-Nabi",
+   "zh": "独立日 / 圣纪节"
+  },
+  "2027-08-25": {
+   "en": "Janmashtami (Vaishnava)",
+   "zh": "黑天诞辰节"
+  },
+  "2027-10-02": {
+   "en": "Mahatma Gandhi's Birthday",
+   "zh": "甘地诞辰"
+  },
+  "2027-10-09": {
+   "en": "Dussehra (Vijaya Dashmi)",
+   "zh": "十胜节"
+  },
+  "2027-10-29": {
+   "en": "Diwali (Deepavali)",
+   "zh": "排灯节"
+  },
+  "2027-11-14": {
+   "en": "Guru Nanak's Birthday",
+   "zh": "那纳克祖师诞辰"
+  },
+  "2027-12-25": {
+   "en": "Christmas Day",
+   "zh": "圣诞节"
+  }
+ },
  "metadata": {
   "country": "india",
   "countryName": "印度",
   "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T10:23:39Z",
+  "generatedAt": "2026-09-05T11:55:45Z",
   "years": [
    2024,
    2030
@@ -91,6 +357,6 @@
    "https://documents.doptcirculars.nic.in/D2/D02est/Holidays%20to%20be%20observed%20in%20Central%20Government%20Offices%20during%20the%20year%2020265vgBs.pdf",
    "https://dopt.gov.in/sites/default/files/List%20of%20Holidays%20for%20the%20Year%202027.pdf"
   ],
-  "note": "口径：DoPT 中央政府在 Delhi/New Delhi 行政办公室的带薪假日名单（含共和国日/独立日/甘地诞辰等固定假日与按历法公布的宗教节日）。印度各邦另有本地假日，未包含。官方文件为扫描版 PDF，日期表按官方 OM 文本逐条核对（2026 Bakrid 按 PIB 修订为 05-28）。当前官方公布至 2027；其后年份待 DoPT 公布后补充，App 端先以固定全国假日规则兜底。"
+  "note": "口径：DoPT 中央政府在 Delhi/New Delhi 行政办公室的带薪假日名单（含共和国日/独立日/甘地诞辰等固定假日与按历法公布的宗教节日）。印度各邦另有本地假日，未包含。官方文件为扫描版 PDF，日期表按官方 OM 文本逐条核对（2026 Bakrid 按 PIB 修订为 05-28）；holiday_names 的中文名为翻译，供 App 展示，官方仅提供英文名。当前官方公布至 2027；其后年份待 DoPT 公布后补充，App 端先以固定全国假日规则兜底。"
  }
 }

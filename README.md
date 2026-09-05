@@ -11,6 +11,9 @@ france / germany / india），统一 schema：
 - `holidays`：休息日日期（YYYY-MM-DD）
 - `extra_workdays`：补班日（目前只有中国有）
 - `ranges`：中国放假区间（名称/起止；其它国家为空）
+- `holiday_names`：可选，`{ "YYYY-MM-DD": { "zh": 中文名, "en": 英文名 } }`
+  ——非中国国家（日本/美国/英国/法国/德国/印度）2024-2030 数据已带节日名，
+  供 App 日历格与「本月节假日」卡片显示；中国沿用 `ranges` 名称可不带。
 - `metadata.officialYears`：官方公布/官方口径核对的年份
 
 规则 / 预测文档命名统一用**连字符**：`holiday-rules-<country>.md`

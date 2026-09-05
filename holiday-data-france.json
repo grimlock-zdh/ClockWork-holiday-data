@@ -80,11 +80,321 @@
  ],
  "extra_workdays": [],
  "ranges": [],
+ "holiday_names": {
+  "2030-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2030-04-22": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2030-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2030-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2030-05-30": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2030-06-10": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2030-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2030-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2030-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2030-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2030-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2029-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2029-04-02": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2029-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2029-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2029-05-10": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2029-05-21": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2029-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2029-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2029-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2029-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2029-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2028-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2028-04-17": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2028-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2028-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2028-05-25": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2028-06-05": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2028-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2028-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2028-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2028-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2028-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2027-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2027-03-29": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2027-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2027-05-06": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2027-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2027-05-17": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2027-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2027-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2027-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2027-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2027-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2026-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2026-04-06": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2026-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2026-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2026-05-14": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2026-05-25": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2026-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2026-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2026-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2026-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2026-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2025-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2025-04-21": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2025-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2025-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2025-05-29": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2025-06-09": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2025-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2025-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2025-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2025-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2025-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2024-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2024-04-01": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2024-05-01": {
+   "zh": "劳动节",
+   "en": "Labour Day"
+  },
+  "2024-05-08": {
+   "zh": "胜利日",
+   "en": "Victory in Europe Day"
+  },
+  "2024-05-09": {
+   "zh": "耶稣升天节",
+   "en": "Ascension Day"
+  },
+  "2024-05-20": {
+   "zh": "圣灵降临节",
+   "en": "Whit Monday"
+  },
+  "2024-07-14": {
+   "zh": "国庆日",
+   "en": "Bastille Day"
+  },
+  "2024-08-15": {
+   "zh": "圣母升天",
+   "en": "Assumption Day"
+  },
+  "2024-11-01": {
+   "zh": "诸圣节",
+   "en": "All Saints' Day"
+  },
+  "2024-11-11": {
+   "zh": "停战日",
+   "en": "Armistice Day"
+  },
+  "2024-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  }
+ },
  "metadata": {
   "country": "france",
   "countryName": "法国",
   "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T09:56:00Z",
+  "generatedAt": "2026-09-05T11:54:43Z",
   "years": [
    2024,
    2030

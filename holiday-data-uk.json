@@ -59,11 +59,237 @@
  ],
  "extra_workdays": [],
  "ranges": [],
+ "holiday_names": {
+  "2024-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2024-03-29": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2024-04-01": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2024-05-06": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2024-05-27": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2024-08-26": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2024-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2024-12-26": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2025-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2025-04-18": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2025-04-21": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2025-05-05": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2025-05-26": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2025-08-25": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2025-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2025-12-26": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2026-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2026-04-03": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2026-04-06": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2026-05-04": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2026-05-25": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2026-08-31": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2026-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2026-12-28": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2027-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2027-03-26": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2027-03-29": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2027-05-03": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2027-05-31": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2027-08-30": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2027-12-27": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2027-12-28": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2028-01-03": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2028-04-14": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2028-04-17": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2028-05-01": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2028-05-29": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2028-08-28": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2028-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2028-12-26": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2029-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2029-03-30": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2029-04-02": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2029-05-07": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2029-05-28": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2029-08-27": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2029-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2029-12-26": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  },
+  "2030-01-01": {
+   "zh": "新年",
+   "en": "New Year's Day"
+  },
+  "2030-04-19": {
+   "zh": "耶稣受难日",
+   "en": "Good Friday"
+  },
+  "2030-04-22": {
+   "zh": "复活节星期一",
+   "en": "Easter Monday"
+  },
+  "2030-05-06": {
+   "zh": "五月假日",
+   "en": "Early May Bank Holiday"
+  },
+  "2030-05-27": {
+   "zh": "春季假日",
+   "en": "Spring Bank Holiday"
+  },
+  "2030-08-26": {
+   "zh": "夏季假日",
+   "en": "Summer Bank Holiday"
+  },
+  "2030-12-25": {
+   "zh": "圣诞节",
+   "en": "Christmas Day"
+  },
+  "2030-12-26": {
+   "zh": "节礼日",
+   "en": "Boxing Day"
+  }
+ },
  "metadata": {
   "country": "uk",
   "countryName": "英国",
   "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T09:55:59Z",
+  "generatedAt": "2026-09-05T11:55:11Z",
   "years": [
    2024,
    2030

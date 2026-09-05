@@ -30,18 +30,19 @@ BERLIN_URL = (
 )
 
 # 全国 9 天（与各州法律一致的法定规则）
-def national_days(year: int) -> set[date]:
+def national_days(year: int) -> dict[date, tuple[str, str]]:
+    """返回 {日期: (中文名, 英文名)}，日期与各州法律一致的全国 9 天。"""
     easter = common.easter_sunday(year)
-    days = {
-        date(year, 1, 1),                                    # Neujahr
-        easter - timedelta(days=2),                          # Karfreitag
-        easter + timedelta(days=1),                          # Ostermontag
-        date(year, 5, 1),                                    # Tag der Arbeit
-        easter + timedelta(days=39),                         # Christi Himmelfahrt
-        easter + timedelta(days=50),                         # Pfingstmontag
-        date(year, 10, 3),                                   # Tag der Deutschen Einheit
-        date(year, 12, 25),                                  # 1. Weihnachtstag
-        date(year, 12, 26),                                  # 2. Weihnachtstag
+    days: dict[date, tuple[str, str]] = {
+        date(year, 1, 1): ("元旦", "New Year's Day"),                 # Neujahr
+        easter - timedelta(days=2): ("耶稣受难日", "Good Friday"),     # Karfreitag
+        easter + timedelta(days=1): ("复活节星期一", "Easter Monday"), # Ostermontag
+        date(year, 5, 1): ("劳动节", "Labour Day"),                   # Tag der Arbeit
+        easter + timedelta(days=39): ("耶稣升天节", "Ascension Day"),  # Christi Himmelfahrt
+        easter + timedelta(days=50): ("圣灵降临节", "Whit Monday"),    # Pfingstmontag
+        date(year, 10, 3): ("德国统一日", "German Unity Day"),         # Tag der Deutschen Einheit
+        date(year, 12, 25): ("圣诞节", "Christmas Day"),              # 1. Weihnachtstag
+        date(year, 12, 26): ("节礼日", "Boxing Day"),                 # 2. Weihnachtstag
     }
     return days
 
@@ -63,10 +64,10 @@ def parse_berlin_dates(html: str) -> dict[int, set[date]]:
 
 
 def main() -> None:
-    all_days: set[date] = set()
+    all_records: dict[date, tuple[str, str]] = {}
     official_years = set(common.TARGET_YEARS)
     for year in common.TARGET_YEARS:
-        all_days |= national_days(year)
+        all_records.update(national_days(year))
 
     # 官方页面核对（柏林公布 2026/2027；必须包含全部 9 个全国性假日）
     html = common.http_text(BERLIN_URL)
@@ -75,7 +76,7 @@ def main() -> None:
         berlin = parse_berlin_dates(html)
         for year in sorted(set(common.TARGET_YEARS) & set(berlin)):
             national = national_days(year)
-            missing = national - berlin[year]
+            missing = set(national) - berlin[year]
             if missing:
                 raise SystemExit(
                     f"核对失败：柏林官方 {year} 页缺少全国性假日 "
@@ -97,11 +98,15 @@ def main() -> None:
     common.write_json(
         country="germany",
         country_name="德国",
-        holidays=(common.iso(d) for d in all_days),
+        holidays=(common.iso(d) for d in all_records),
         official_years=official_years,
         source="各州 Sonn- und Feiertagsgesetz 统一法定口径 + Berlin.de 官方核对",
         source_urls=[BERLIN_URL],
         note=note,
+        holiday_names={
+            common.iso(d): {"zh": zh, "en": en}
+            for d, (zh, en) in all_records.items()
+        },
     )
 
 

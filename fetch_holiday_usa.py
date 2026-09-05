@@ -32,6 +32,31 @@ MONTH_NAMES = {
     "September": 9, "October": 10, "November": 11, "December": 12,
 }
 
+# OPM 假日名 → (中文名, 英文名)；key 与 OPM 页面名称单元格一致
+US_NAMES: dict[str, tuple[str, str]] = {
+    "New Year's Day": ("元旦", "New Year's Day"),
+    "Birthday of Martin Luther King, Jr.": (
+        "马丁·路德·金纪念日", "Martin Luther King Jr. Day"),
+    "Washington's Birthday": ("华盛顿诞辰", "Washington's Birthday"),
+    "Memorial Day": ("阵亡将士纪念日", "Memorial Day"),
+    "Juneteenth National Independence Day": ("六月节", "Juneteenth National Independence Day"),
+    "Independence Day": ("独立日", "Independence Day"),
+    "Labor Day": ("劳动节", "Labor Day"),
+    "Columbus Day": ("哥伦布日", "Columbus Day"),
+    "Veterans Day": ("退伍军人节", "Veterans Day"),
+    "Thanksgiving Day": ("感恩节", "Thanksgiving Day"),
+    "Christmas Day": ("圣诞节", "Christmas Day"),
+}
+
+
+def us_name(raw: str) -> tuple[str, str]:
+    """按 OPM 页面名称取中英文；未知名称回退英文。"""
+    name = raw.strip().replace("’", "'")
+    if name in US_NAMES:
+        return US_NAMES[name]
+    print(f"  [WARN] 未知美国假日名: {name}，使用英文回退", flush=True)
+    return (name, name)
+
 
 def parse_date_cell(cell: str, year: int) -> date | None:
     """解析 OPM 行日期。年份缺失时优先当年，其次按星期校验回退上一年。"""
@@ -99,6 +124,7 @@ def main() -> None:
     parsed = parse_opm(html)
 
     days: set[date] = set()
+    holiday_names: dict[str, dict[str, str]] = {}
     official_years: set[int] = set()
     for year in common.TARGET_YEARS:
         rows = parsed.get(year, [])
@@ -110,6 +136,8 @@ def main() -> None:
             if "Inauguration Day" in name:
                 continue  # 仅华盛顿特区联邦雇员适用，不计入全国假日
             days.add(d)
+            zh, en = us_name(name)
+            holiday_names[common.iso(d)] = {"zh": zh, "en": en}
 
     note = (
         "数据源：OPM Federal Holidays 官方页面（联邦雇员实际休息日，"
@@ -124,6 +152,7 @@ def main() -> None:
         source="OPM（美国联邦人事管理局）Federal Holidays",
         source_urls=[OPM_URL],
         note=note,
+        holiday_names=holiday_names,
     )
 
 

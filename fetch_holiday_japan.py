@@ -25,6 +25,37 @@ import holiday_common as common
 
 CSV_URL = "https://www8.cao.go.jp/chosei/shukujitsu/syukujitsu.csv"
 
+# 日本节日名 → (中文名, 英文名)
+JP_NAMES: dict[str, tuple[str, str]] = {
+    "元日": ("元旦", "New Year's Day"),
+    "成人の日": ("成人日", "Coming of Age Day"),
+    "建国記念の日": ("建国纪念日", "National Foundation Day"),
+    "天皇誕生日": ("天皇诞生日", "The Emperor's Birthday"),
+    "春分の日": ("春分之日", "Vernal Equinox Day"),
+    "昭和の日": ("昭和日", "Showa Day"),
+    "憲法記念日": ("宪法纪念日", "Constitution Memorial Day"),
+    "みどりの日": ("绿之日", "Greenery Day"),
+    "こどもの日": ("儿童日", "Children's Day"),
+    "海の日": ("海之日", "Marine Day"),
+    "山の日": ("山之日", "Mountain Day"),
+    "敬老の日": ("敬老日", "Respect for the Aged Day"),
+    "秋分の日": ("秋分之日", "Autumnal Equinox Day"),
+    "スポーツの日": ("体育日", "Sports Day"),
+    "文化の日": ("文化日", "Culture Day"),
+    "勤労感謝の日": ("勤劳感谢日", "Labor Thanksgiving Day"),
+    "振替休日": ("补休", "Substitute Holiday"),
+    "国民の休日": ("国民休息日", "Citizens' Holiday"),
+    "休日": ("国民休息日", "Citizens' Holiday"),
+}
+
+
+def jp_name(ja: str) -> tuple[str, str]:
+    """按 CSV 日文名查中英文；未知名字回退英文名（并打印警告）。"""
+    if ja in JP_NAMES:
+        return JP_NAMES[ja]
+    print(f"  [WARN] 未知日本节日名: {ja}，使用英文回退", flush=True)
+    return (ja, ja)
+
 
 # ---------- 春分 / 秋分（天文计算，用于预测未公布年份） ----------
 
@@ -98,19 +129,22 @@ def _jd_to_utc_date(jd: float) -> tuple[int, int, int]:
 
 # ---------- 预测（法定规则） ----------
 
-def predict_base_days(year: int) -> set[date]:
-    """按现行法律推算 2028-2030 基准祝日（春分/秋分为天文预测）。"""
-    days: set[date] = {
-        date(year, 1, 1),                     # 元日
-        date(year, 2, 11),                    # 建国記念の日
-        date(year, 2, 23),                    # 天皇誕生日
-        date(year, 4, 29),                    # 昭和の日
-        date(year, 5, 3),                     # 憲法記念日
-        date(year, 5, 4),                     # みどりの日
-        date(year, 5, 5),                     # こどもの日
-        date(year, 8, 11),                    # 山の日
-        date(year, 11, 3),                    # 文化の日
-        date(year, 11, 23),                   # 勤労感謝の日
+def predict_base_days(year: int) -> dict[date, tuple[str, str]]:
+    """按现行法律推算 2028-2030 基准祝日（春分/秋分为天文预测）。
+
+    返回 {日期: (中文名, 英文名)}。
+    """
+    days: dict[date, tuple[str, str]] = {
+        date(year, 1, 1): jp_name("元日"),
+        date(year, 2, 11): jp_name("建国記念の日"),
+        date(year, 2, 23): jp_name("天皇誕生日"),
+        date(year, 4, 29): jp_name("昭和の日"),
+        date(year, 5, 3): jp_name("憲法記念日"),
+        date(year, 5, 4): jp_name("みどりの日"),
+        date(year, 5, 5): jp_name("こどもの日"),
+        date(year, 8, 11): jp_name("山の日"),
+        date(year, 11, 3): jp_name("文化の日"),
+        date(year, 11, 23): jp_name("勤労感謝の日"),
     }
     adult = common.nth_weekday(year, 1, 1, 2)      # 成人の日（第2月曜）
     marine = common.nth_weekday(year, 7, 1, 3)     # 海の日（第3月曜）
@@ -118,22 +152,28 @@ def predict_base_days(year: int) -> set[date]:
     sports = common.nth_weekday(year, 10, 1, 2)    # スポーツの日（第2月曜）
     for d in (adult, marine, aged, sports):
         if d is not None:
-            days.add(d)
-    days.add(equinox_day(year, 0.0, 3))   # 春分の日
-    days.add(equinox_day(year, 180.0, 9)) # 秋分の日
+            name = {
+                adult: jp_name("成人の日"),
+                marine: jp_name("海の日"),
+                aged: jp_name("敬老の日"),
+                sports: jp_name("スポーツの日"),
+            }[d]
+            days[d] = name
+    days[equinox_day(year, 0.0, 3)] = jp_name("春分の日")
+    days[equinox_day(year, 180.0, 9)] = jp_name("秋分の日")
     return days
 
 
-def apply_holiday_rules(base: set[date], year: int) -> set[date]:
+def apply_holiday_rules(base: dict[date, tuple[str, str]], year: int) -> dict[date, tuple[str, str]]:
     """叠加振替休日与国民の休日（预测年份使用）。"""
-    out = set(base)
+    out = dict(base)
     # 振替休日：祝日在周日 → 下一个非祝日工作日休息
     for d in sorted(base):
         if d.isoweekday() == 7:
             nxt = d + timedelta(days=1)
             while nxt in out:
                 nxt += timedelta(days=1)
-            out.add(nxt)
+            out[nxt] = jp_name("振替休日")
     # 国民の休日：前一日与次日都是祝日（且本身不是周日）→ 休息
     start, end = date(year, 1, 1), date(year, 12, 31)
     d = start
@@ -142,7 +182,7 @@ def apply_holiday_rules(base: set[date], year: int) -> set[date]:
             prev = d - timedelta(days=1)
             nxt = d + timedelta(days=1)
             if prev in out and nxt in out:
-                out.add(d)
+                out[d] = jp_name("国民の休日")
         d += timedelta(days=1)
     return out
 
@@ -156,22 +196,28 @@ def main() -> None:
     reader = csv.reader(io.StringIO(text))
     rows = [(r[0].strip(), r[1].strip()) for r in reader if len(r) >= 2 and "/" in r[0]]
 
-    official: set[date] = set()
+    official: dict[date, tuple[str, str]] = {}
     official_years: set[int] = set()
-    for raw_date, _name in rows:
+    for raw_date, ja in rows:
         y, m, d = (int(x) for x in raw_date.split("/"))
         day = date(y, m, d)
         if y in common.TARGET_YEARS:
-            official.add(day)
+            official[day] = jp_name(ja)
             official_years.add(y)
 
     # 预测未公布年份（官方 CSV 之外）
-    predicted: set[date] = set()
+    predicted: dict[date, tuple[str, str]] = {}
     for y in common.TARGET_YEARS:
         if y not in official_years:
             predicted |= apply_holiday_rules(predict_base_days(y), y)
 
-    days = {common.iso(d) for d in official | predicted}
+    combined: dict[date, tuple[str, str]] = dict(official)
+    combined.update(predicted)
+    days = sorted(common.iso(d) for d in combined)
+    holiday_names = {
+        common.iso(d): {"zh": zh, "en": en}
+        for d, (zh, en) in combined.items()
+    }
     note = (
         "数据源：内閣府「国民の祝日について」CSV（含振替休日/国民の休日）。"
         f"官方公布至 {max(official_years) if official_years else 0}；"
@@ -185,6 +231,7 @@ def main() -> None:
         source="内閣府 国民の祝日について（公式 CSV）",
         source_urls=[CSV_URL],
         note=note,
+        holiday_names=holiday_names,
     )
 
 

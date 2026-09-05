@@ -132,11 +132,529 @@
  ],
  "extra_workdays": [],
  "ranges": [],
+ "holiday_names": {
+  "2024-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2024-01-08": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2024-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2024-02-12": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2024-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2024-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2024-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2024-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2024-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2024-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2024-05-06": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2024-07-15": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2024-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2024-08-12": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2024-09-16": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2024-09-22": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2024-09-23": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2024-10-14": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2024-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2024-11-04": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2024-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2025-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2025-01-13": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2025-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2025-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2025-02-24": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2025-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2025-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2025-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2025-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2025-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2025-05-06": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2025-07-21": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2025-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2025-09-15": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2025-09-23": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2025-10-13": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2025-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2025-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2025-11-24": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2026-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2026-01-12": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2026-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2026-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2026-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2026-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2026-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2026-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2026-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2026-05-06": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2026-07-20": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2026-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2026-09-21": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2026-09-22": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2026-09-23": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2026-10-12": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2026-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2026-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2027-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2027-01-11": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2027-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2027-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2027-03-21": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2027-03-22": {
+   "zh": "国民休息日",
+   "en": "Citizens' Holiday"
+  },
+  "2027-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2027-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2027-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2027-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2027-07-19": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2027-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2027-09-20": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2027-09-23": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2027-10-11": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2027-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2027-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2028-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2028-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2028-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2028-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2028-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2028-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2028-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2028-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2028-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2028-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2028-01-10": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2028-07-17": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2028-09-18": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2028-10-09": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2028-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2028-09-22": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2029-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2029-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2029-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2029-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2029-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2029-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2029-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2029-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2029-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2029-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2029-01-08": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2029-07-16": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2029-09-17": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2029-10-08": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2029-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2029-09-23": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2029-02-12": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  },
+  "2029-04-30": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  },
+  "2029-09-24": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  },
+  "2030-01-01": {
+   "zh": "元旦",
+   "en": "New Year's Day"
+  },
+  "2030-02-11": {
+   "zh": "建国纪念日",
+   "en": "National Foundation Day"
+  },
+  "2030-02-23": {
+   "zh": "天皇诞生日",
+   "en": "The Emperor's Birthday"
+  },
+  "2030-04-29": {
+   "zh": "昭和日",
+   "en": "Showa Day"
+  },
+  "2030-05-03": {
+   "zh": "宪法纪念日",
+   "en": "Constitution Memorial Day"
+  },
+  "2030-05-04": {
+   "zh": "绿之日",
+   "en": "Greenery Day"
+  },
+  "2030-05-05": {
+   "zh": "儿童日",
+   "en": "Children's Day"
+  },
+  "2030-08-11": {
+   "zh": "山之日",
+   "en": "Mountain Day"
+  },
+  "2030-11-03": {
+   "zh": "文化日",
+   "en": "Culture Day"
+  },
+  "2030-11-23": {
+   "zh": "勤劳感谢日",
+   "en": "Labor Thanksgiving Day"
+  },
+  "2030-01-14": {
+   "zh": "成人日",
+   "en": "Coming of Age Day"
+  },
+  "2030-07-15": {
+   "zh": "海之日",
+   "en": "Marine Day"
+  },
+  "2030-09-16": {
+   "zh": "敬老日",
+   "en": "Respect for the Aged Day"
+  },
+  "2030-10-14": {
+   "zh": "体育日",
+   "en": "Sports Day"
+  },
+  "2030-03-20": {
+   "zh": "春分之日",
+   "en": "Vernal Equinox Day"
+  },
+  "2030-09-23": {
+   "zh": "秋分之日",
+   "en": "Autumnal Equinox Day"
+  },
+  "2030-05-06": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  },
+  "2030-08-12": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  },
+  "2030-11-04": {
+   "zh": "补休",
+   "en": "Substitute Holiday"
+  }
+ },
  "metadata": {
   "country": "japan",
   "countryName": "日本",
   "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T09:55:53Z",
+  "generatedAt": "2026-09-05T11:54:55Z",
   "years": [
    2024,
    2030
