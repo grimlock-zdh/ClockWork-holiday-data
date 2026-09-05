@@ -4,10 +4,10 @@
 
 ## 内容
 
-- `holiday-data.json` — 中国数据（`holidays` / `extra_workdays` / `ranges` / `metadata`）
+- `holiday-data-china.json` — 中国数据（`holidays` / `extra_workdays` / `ranges` / `metadata`）
 - `holiday-data-<country>.json` — 规则型国家数据（日本/美国/英国/法国/德国，
   由 `generate_statutory.py` 从 App 内置规则生成）
-- `fetch_holiday.py` — 自动抓取国务院放假通知并生成 `holiday-data.json` 的脚本
+- `fetch_holiday.py` — 自动抓取国务院放假通知并生成 `holiday-data-china.json` 的脚本
 - `generate_statutory.py` — 按国家规则生成 `holiday-data-<country>.json`
 - `HOLIDAY_RULES.md` — 节假日规则说明（哪些算放假/补班）
 - `.github/workflows/fetch-holiday.yml` — 每周一自动检查更新 + 手动触发
@@ -15,8 +15,7 @@
 ## 多国数据结构
 
 每个国家一份 `holiday-data-<country>.json`（country = App 国家标识：
-china / japan / usa / uk / france / germany）。中国文件名保持
-`holiday-data.json`（历史兼容，App 当前联网只取中国）。
+china / japan / usa / uk / france / germany），命名统一。
 
 各国文件统一 schema：
 
@@ -33,25 +32,19 @@ china / japan / usa / uk / france / germany）。中国文件名保持
 国内访问建议走 jsDelivr CDN（GitHub 镜像，国内一般可直连）：
 
 ```
-https://cdn.jsdelivr.net/gh/grimlock-zdh/ClockWork-holiday-data@main/holiday-data.json
+https://cdn.jsdelivr.net/gh/grimlock-zdh/ClockWork-holiday-data@main/holiday-data-china.json
 ```
 
 原始地址：
 
 ```
-https://raw.githubusercontent.com/grimlock-zdh/ClockWork-holiday-data/main/holiday-data.json
-```
-
-未来按国家拉取时用：
-
-```
-https://cdn.jsdelivr.net/gh/grimlock-zdh/ClockWork-holiday-data@main/holiday-data-<country>.json
+https://raw.githubusercontent.com/grimlock-zdh/ClockWork-holiday-data/main/holiday-data-china.json
 ```
 
 ## 更新数据
 
 ```bash
-python3 fetch_holiday.py   # 生成 holiday-data.json
+python3 fetch_holiday.py   # 生成 holiday-data-china.json
 ```
 
 或到 Actions 里手动触发 `自动更新节假日数据` workflow。

@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """
-国务院放假通知爬虫 — 自动抓取并解析为 holiday-data.json
+国务院放假通知爬虫 — 自动抓取并解析为 holiday-data-china.json
 
 原理：
 1. 通过 Bing 搜索找到 gov.cn 上的放假通知
 2. 提取纯文本内容，用正则解析出：
    - 假期名称、起止日期
    - 调休补班日
-3. 输出 holiday-data.json（与 App 端格式一致）
+3. 输出 holiday-data-china.json（与 App 端格式一致）
 
 使用：python3 fetch_holiday.py
-输出：holiday-data.json（直接写入当前目录）
+输出：holiday-data-china.json（直接写入当前目录）
 """
 
 import json
@@ -336,7 +336,7 @@ def main():
     }
     
     try:
-        with open("holiday-data.json", "r") as f:
+        with open("holiday-data-china.json", "r") as f:
             existing = json.load(f)
         print(f"[INFO] 读取已有数据: {len(existing['holidays'])} 假日, {len(existing['extra_workdays'])} 补班", file=sys.stderr)
     except FileNotFoundError:
@@ -351,10 +351,10 @@ def main():
             existing = merge_with_existing(existing, data, year)
     
     output = json.dumps(existing, ensure_ascii=False, indent=2)
-    with open("holiday-data.json", "w") as f:
+    with open("holiday-data-china.json", "w") as f:
         f.write(output)
     
-    print(f"\n[OK] 已写入 holiday-data.json ({len(existing['holidays'])} 假日, {len(existing['extra_workdays'])} 补班)", file=sys.stderr)
+    print(f"\n[OK] 已写入 holiday-data-china.json ({len(existing['holidays'])} 假日, {len(existing['extra_workdays'])} 补班)", file=sys.stderr)
 
 
 if __name__ == "__main__":
