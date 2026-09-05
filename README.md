@@ -2,7 +2,7 @@
 
 发条 ClockWork 的法定节假日数据仓库（公开）。每个国家一份
 `holiday-data-<country>.json`（country = china / japan / usa / uk /
-france / germany），统一 schema：
+france / germany / india），统一 schema：
 
 ```json
 { "holidays": [...], "extra_workdays": [], "ranges": [], "metadata": {...} }
@@ -23,6 +23,7 @@ france / germany），统一 schema：
 | 英国 | GOV.UK Bank Holidays API | 至 2028 | 英格兰+威尔士口径；苏格兰/北爱尔兰另有当地假日 |
 | 法国 | data.gouv / Etalab jours fériés API | 至当前+5 年 | 法国本土口径；不含阿尔萨斯-摩泽尔与海外省当地假日 |
 | 德国 | 各州 Feiertagsgesetz 统一法定口径 + Berlin.de 官方核对 | 2024-2030 | 全德 16 州一致的 9 个全国性假日；不含各州特有假日 |
+| 印度 | DoPT（人事与培训部）中央政府在 Delhi/New Delhi 行政办公室放假名单（Office Memorandum） | 2024-2027 | 官方文件为扫描版 PDF，日期表按官方 OM 文本逐年核对；印度各邦另有本地假日，未包含 |
 
 ## 爬虫脚本
 
@@ -34,11 +35,15 @@ france / germany），统一 schema：
 | `fetch_holiday_uk.py` | `holiday-data-uk.json` |
 | `fetch_holiday_france.py` | `holiday-data-france.json` |
 | `fetch_holiday_germany.py` | `holiday-data-germany.json` |
+| `fetch_holiday_india.py` | `holiday-data-india.json` |
 | `holiday_common.py` | 共享工具（HTTP/日期/Easter/输出 schema） |
 
 只依赖 Python 标准库。官方尚未公布的年份（如日本 2028+、英国 2029+）
 由脚本按法定规则推算并写入文件，但**不计入 `officialYears`**——官方源
-更新后爬虫自动用官方日期覆盖。
+更新后爬虫自动用官方日期覆盖。印度 DoPT 每年 7 月公布次年名单，且官方
+PDF 为扫描版无文本层，脚本内嵌经官方 OM 文本核对后的日期表并逐年断言，
+公布新年度后需在 `fetch_holiday_india.py` 的 `OFFICIAL_YEARS` 补一行；
+App 端对该国未公布年份仅用固定全国假日规则兜底（共和国日/独立日/甘地诞辰/圣诞）。
 
 ## 更新数据
 
@@ -49,9 +54,10 @@ python3 fetch_holiday_usa.py        # 美国
 python3 fetch_holiday_uk.py         # 英国
 python3 fetch_holiday_france.py     # 法国
 python3 fetch_holiday_germany.py    # 德国
+python3 fetch_holiday_india.py      # 印度
 ```
 
-或到 Actions 手动触发「自动更新节假日数据（6 国官方源）」
+或到 Actions 手动触发「自动更新节假日数据（7 国官方源）」
 （每周一北京时间 08:00 自动运行，有变化才提交）。
 
 ## App 拉取地址

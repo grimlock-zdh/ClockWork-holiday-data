@@ -1,4 +1,4 @@
-name: 自动更新节假日数据（6 国官方源）
+name: 自动更新节假日数据（7 国官方源）
 
 on:
   schedule:
@@ -39,6 +39,9 @@ jobs:
 
       - name: 爬取德国（法定规则 + Berlin 官方核对）
         run: python3 fetch_holiday_germany.py
+
+      - name: 爬取印度（DoPT OM 核对表）
+        run: python3 fetch_holiday_india.py
       
       - name: 检查是否有更新
         id: check
