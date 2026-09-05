@@ -13,6 +13,15 @@ france / germany / india），统一 schema：
 - `ranges`：中国放假区间（名称/起止；其它国家为空）
 - `metadata.officialYears`：官方公布/官方口径核对的年份
 
+## 新增国家流程
+
+给 App 加一个新国家节假日时，**先读 ClockWork 仓库根目录的
+`HOLIDAY_ADD_COUNTRY_PROCESS.md`**（本机路径
+`../ClockWork/HOLIDAY_ADD_COUNTRY_PROCESS.md`）。那份清单涵盖本仓库
+（爬虫 / JSON / README / fetch workflow）与 ClockWork App 侧（内置数据 /
+Picker / 规则表 / sync workflow / xcodegen / 文档）的全部改动点，
+避免漏加文件或踩官方口径、浮动假日、扫描 PDF 等已知坑。
+
 ## 数据源（各国官方口径）
 
 | 国家 | 数据源 | 官方覆盖 | 说明 |
