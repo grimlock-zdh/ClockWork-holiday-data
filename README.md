@@ -69,4 +69,5 @@ https://raw.githubusercontent.com/grimlock-zdh/ClockWork-holiday-data/main/holid
 ```
 
 > ClockWork 主仓库的 `sync-holiday-data.yml` 每周从本仓库拉全部
-> `holiday-data-*.json` 同步 App/挂件内置快照。
+> `holiday-data-*.json`，写入其唯一共享目录 `ClockWork/Resources/HolidayData/`；
+> App 与挂件两个 target 构建时各拷入自身 bundle（git 内只保留一份）。
