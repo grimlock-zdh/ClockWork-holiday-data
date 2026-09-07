@@ -323,8 +323,8 @@
  "metadata": {
   "country": "germany",
   "countryName": "德国",
-  "lastUpdate": "2026-09-05",
-  "generatedAt": "2026-09-05T11:54:29Z",
+  "lastUpdate": "2026-09-07",
+  "generatedAt": "2026-09-07T02:20:42Z",
   "years": [
    2024,
    2030
@@ -342,6 +342,6 @@
   "sourceUrls": [
    "https://www.berlin.de/tourismus/infos/1887651-1721039-feiertage-schulferien.html"
   ],
-  "note": "口径：全德 16 州一致的 9 个全国性法定假日（Karfreitag 等复活节系假日按各州 Feiertagsgesetz 统一规则 + 复活节算法计算）。不含各州特有假日（1/6、Fronleichnam、Allerheiligen 等需州级选择）。已与柏林官方页面核对年份：[2026, 2027]。"
+  "note": "口径：全德 16 州一致的 9 个全国性法定假日（Karfreitag 等复活节系假日按各州 Feiertagsgesetz 统一规则 + 复活节算法计算）。不含各州特有假日（1/6、Fronleichnam、Allerheiligen 等需州级选择）。本次未完成官方页面核对。"
  }
 }
