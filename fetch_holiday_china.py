@@ -28,9 +28,11 @@ from typing import Optional
 
 HEADERS = {
     "User-Agent": (
+        "ClockWorkHolidayBot/1.0 (grimlock_zdh@163.com) "
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ),
+    "From": "grimlock_zdh@163.com",
     "Accept-Language": "zh-CN,zh;q=0.9",
 }
 
@@ -38,6 +40,11 @@ HEADERS = {
 BING_SEARCH_URL = (
     "https://www.bing.com/search?q={query}&setlang=zh-Hans"
 )
+
+# 中国政府网“最新政策”的静态数据。优先从这里查找通知，避免每次依赖
+# Bing 索引；正常情况下一次 GET 就能确认是否已发布。
+LATEST_POLICY_URL = "https://www.gov.cn/zhengce/zuixin/ZUIXINZHENGCE.json"
+INDEX_ONLY = "--index-only" in sys.argv
 
 # 已知的放假通知文章号（Fallback，当 Bing 搜索失败时直接尝试）
 # 每年约 10~11 月发布，URL 模式为 /zhengce/content/{YYYY}{MM}/content_{数字}.htm
@@ -94,7 +101,26 @@ def extract_text_from_html(html: str) -> str:
 
 
 def find_article_url(year: int) -> Optional[str]:
-    """通过 Bing 搜索找到对应年份的放假通知 URL"""
+    """从 gov.cn 最新政策索引查找；失败时才回退 Bing。"""
+    latest_html = fetch_page(LATEST_POLICY_URL)
+    if latest_html:
+        try:
+            items = json.loads(latest_html)
+            for item in items:
+                title = str(item.get("TITLE", ""))
+                url = str(item.get("URL", ""))
+                if f"{year}年" in title and "部分节假日安排" in title and url:
+                    page_html = fetch_page(url)
+                    if page_html and "节假日安排" in page_html:
+                        return url
+        except (TypeError, ValueError) as e:
+            print(f"  [WARN] 解析最新政策索引失败: {e}", file=sys.stderr)
+
+    # 高频检查只发一次官网索引请求；Bing/URL 猜测留给每周全量任务。
+    if INDEX_ONLY:
+        return None
+
+    # 历史年份或索引页暂未收录时，继续走原搜索发现逻辑。
     query = urllib.parse.quote(f"{year}年放假安排 site:gov.cn")
     url = BING_SEARCH_URL.format(query=query)
     html = fetch_page(url)
@@ -243,7 +269,7 @@ def fetch_holiday_data(year: int) -> Optional[dict]:
     
     # 1. 找文章 URL
     article_url = find_article_url(year)
-    if not article_url:
+    if not article_url and not INDEX_ONLY:
         print(f"  [INFO] Bing 搜索未找到，尝试直接 URL...", file=sys.stderr)
         article_url = find_article_url_direct(year)
     
@@ -258,7 +284,7 @@ def fetch_holiday_data(year: int) -> Optional[dict]:
                 article_url = None
         # 如果已知 URL 也失效，尝试猜测模式
         # 当年 10~11 月发布的，content_ 后面的数字每年递增大约 5-15 万
-        if not article_url:
+        if not article_url and not INDEX_ONLY:
             # 以 2026 年为基准向前/向后尝试
             base_path = KNOWN_ARTICLE_PATHS.get(year - 1) or KNOWN_ARTICLE_PATHS.get(year + 1)
             if base_path:
@@ -343,7 +369,14 @@ def main():
         print(f"[INFO] 新建数据文件", file=sys.stderr)
     
     current_year = date.today().year
-    years_to_fetch = [current_year - 1, current_year, current_year + 1, current_year + 2]
+    # 以往年份在官方发布后不会变化。每天检查时只请求“当前年 + 下一年”，
+    # 且跳过 metadata.officialYears 已确认的年份，避免无意义抓取。
+    official_years = set(existing.get("metadata", {}).get("officialYears", []))
+    years_to_fetch = [
+        year for year in (current_year, current_year + 1)
+        if year not in official_years
+    ]
+    print(f"[INFO] 待检查年份: {years_to_fetch or '无（均已有官方数据）'}", file=sys.stderr)
     
     for year in years_to_fetch:
         data = fetch_holiday_data(year)

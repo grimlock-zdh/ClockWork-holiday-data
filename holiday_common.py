@@ -18,9 +18,11 @@ TARGET_YEARS = range(2024, 2031)
 
 HEADERS = {
     "User-Agent": (
+        "ClockWorkHolidayBot/1.0 (grimlock_zdh@163.com) "
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
     ),
+    "From": "grimlock_zdh@163.com",
     "Accept-Language": "en,zh-CN;q=0.8,zh;q=0.6,ja;q=0.4,de;q=0.4,fr;q=0.4",
 }
 
@@ -122,6 +124,27 @@ def write_json(
         },
     }
     path = f"holiday-data-{country}.json"
+
+    # 官方源即使没有新日期也会刷新生成时间。只有减去这两个易变时间戳后
+    # 确实发生变化才保留新时间，避免每天产生“只改 generatedAt”的空提交。
+    old_data = None
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            old_data = json.load(f)
+    except (FileNotFoundError, ValueError):
+        pass
+    if old_data:
+        old_meta = old_data.get("metadata", {})
+        comparable_old = json.loads(json.dumps(old_data))
+        comparable_new = json.loads(json.dumps(data))
+        for comparable in (comparable_old, comparable_new):
+            comparable.get("metadata", {}).pop("lastUpdate", None)
+            comparable.get("metadata", {}).pop("generatedAt", None)
+        if comparable_old == comparable_new:
+            for key in ("lastUpdate", "generatedAt"):
+                if key in old_meta:
+                    data["metadata"][key] = old_meta[key]
+
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=1)
         f.write("\n")
