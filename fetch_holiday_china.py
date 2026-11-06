@@ -53,6 +53,7 @@ KNOWN_ARTICLE_PATHS = {
     2024: "202310/content_6914152.htm",
     2025: "202410/content_6973123.htm",
     2026: "202511/content_7047090.htm",
+    2027: "202611/content_7085101.htm",
 }
 
 # 月份名称 -> 数字
@@ -214,7 +215,9 @@ def parse_holiday_text(text: str, year: int) -> dict:
         #   "四、劳动节： 5月1日（周五）至5日（周二）放假调休，共5天。"
         
         # 模式1: "{name}： XX月XX日（...）至[XX月]XX日（...）放假"
-        pat1 = rf'{name}[:：]\s*(\d+)月(\d+)日[^至]*?至\s*(?:(\d+)月)?(\d+)日'
+        # 必须在同一句内找到“至”，否则单日节日会跨到后面国庆的“至7日”，
+        # 被错误解析成“6月9日至6月7日”这一类倒序区间。
+        pat1 = rf'{name}[:：]\s*(\d+)月(\d+)日[^。；]*?至\s*(?:(\d+)月)?(\d+)日'
         # 模式2: "{name}： XX月XX日放假"（单日）
         pat2 = rf'{name}[:：]\s*(\d+)月(\d+)日[^。]*?(?:放|假)'
         
@@ -378,10 +381,20 @@ def main():
     ]
     print(f"[INFO] 待检查年份: {years_to_fetch or '无（均已有官方数据）'}", file=sys.stderr)
     
+    fetched_official_years = set()
     for year in years_to_fetch:
         data = fetch_holiday_data(year)
         if data and (data["holidays"] or data["extra_workdays"]):
             existing = merge_with_existing(existing, data, year)
+            fetched_official_years.add(year)
+
+    if fetched_official_years:
+        metadata = existing.setdefault("metadata", {})
+        metadata["lastUpdate"] = date.today().isoformat()
+        metadata["source"] = "国务院办公厅通知 + 预估"
+        metadata["officialYears"] = sorted(
+            set(metadata.get("officialYears", [])) | fetched_official_years
+        )
     
     output = json.dumps(existing, ensure_ascii=False, indent=2)
     with open("holiday-data-china.json", "w") as f:
